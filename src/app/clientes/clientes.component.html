@@ -34,7 +34,10 @@
       <tbody>
         <tr *ngFor="let item of clientes; let i = index">
           <th>
-            <img src="{{imagenSrc}}" alt="sin imagen" class="img-thumbnail rounded"
+            <img *ngIf="item.imagen" src="http://localhost:8087/api/uploads/imagen/{{item.imagen}}" alt="sin imagen" class="img-thumbnail rounded"
+              style="width: 64px;">
+
+            <img *ngIf="!item.imagen" src="{{imagenSrc}}" alt="sin imagen" class="img-thumbnail rounded"
               style="width: 64px;">
 
           </th>
