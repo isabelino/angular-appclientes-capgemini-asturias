@@ -69,7 +69,6 @@ export class ClienteService {
     formData.append("id",id);
 
     let httpHeaders = new HttpHeaders();
-
     let token= this.authService.token;
 
     if(token != null){
